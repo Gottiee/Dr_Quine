@@ -44,9 +44,6 @@ $(OBJ_DIR)%.o:	 $(SRC_DIR)%.c
 			@echo "$(BLUE)Creating object file -> $(WHITE)$(notdir $@)... $(RED)[Done]$(NOC)"
 
 
-#	BONUS
-bonus:		obj $(LIB) $(NAME_BONUS)
-
 #	 RULES
 obj:
 			@mkdir -p $(OBJ_DIR)
@@ -54,6 +51,7 @@ obj:
 
 clean:
 			@$(RM) $(OBJ_DIR) $(DEPS_DIR)
+			@$(RM) Grace_kid.c
 			@echo "$(BLUE)$(NAME) object files cleaned!$(DEF_COLOR)"
 
 fclean:		clean
