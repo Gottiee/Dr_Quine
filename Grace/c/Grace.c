@@ -1,6 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
+#define GRACE() int main(){printf("salut\n");}
 
-int main()
-{
-}
+GRACE();
