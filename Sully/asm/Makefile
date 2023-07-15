@@ -1,23 +1,22 @@
-NAMES = Grace
-OBJS = Grace.o 
+NAMES = Sully
+OBJS = Sully.o 
 
 NASMFLAGS = -f elf64
 GCCFLAGS = -Wextra -Wall -Werror -no-pie
 
 all: $(NAMES)
 
-Grace: Grace.o
-	gcc $(GCCFLAGS) Grace.o -o Grace
+Sully: Sully.o
+	gcc $(GCCFLAGS) Sully.o -o Sully
 
 %.o: %.asm
 	nasm $(NASMFLAGS) $< -o $@
 
 clean:
-	@rm -rf $(OBJS)
-	@rm -rf Grace_kid.asm
+	rm -rf $(OBJS)
 
 fclean: clean
-	@rm -rf $(NAMES)
+	rm -rf $(NAMES)
 
 re: clean all
 
