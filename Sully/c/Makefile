@@ -54,6 +54,7 @@ obj:
 
 clean:
 			@$(RM) $(OBJ_DIR) $(DEPS_DIR)
+			@rm -rf Sully_*
 			@echo "$(BLUE)$(NAME) object files cleaned!$(DEF_COLOR)"
 
 fclean:		clean
